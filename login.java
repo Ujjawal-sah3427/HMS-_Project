@@ -18,19 +18,18 @@ public class login  extends JFrame implements ActionListener {
 
      JLabel nameLabel=new JLabel("Username");
      nameLabel.setFont(new Font("Tahoma",Font.BOLD,15));
-     nameLabel.setBounds(100,20,200,30);
+     nameLabel.setBounds(100,50,200,30);
      nameLabel.setBackground(Color.BLACK);
      add(nameLabel);
 
 
         JLabel password=new JLabel("password");
         password.setFont(new Font("Tahoma",Font.BOLD,15));
-        password.setBounds(100,65,200,30);
+        password.setBounds(100,100,200,30);
         password.setBackground(Color.BLACK);
         add(password);
-
         textField=new JTextField();
-        textField.setBounds(200,20,200,30);
+        textField.setBounds(200,50,200,30);
         textField.setFont(new Font("Thoma",Font.BOLD,15));
         textField.setBackground(Color.CYAN);
         textField.setBorder(BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
@@ -38,7 +37,7 @@ public class login  extends JFrame implements ActionListener {
         add(textField);
 
         passwordField=new JPasswordField();
-        passwordField.setBounds(200,70,200,30);
+        passwordField.setBounds(200,100,200,30);
         passwordField.setFont(new Font("Thoma",Font.BOLD,15));
         passwordField.setBackground(Color.CYAN);
         passwordField.setBorder(BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
@@ -46,11 +45,21 @@ public class login  extends JFrame implements ActionListener {
 
         add( passwordField);
 
+
+
+
+      ImageIcon i11= new ImageIcon(ClassLoader.getSystemResource("icons/logoab.jpg"));
+        Image image1 =i11.getImage().getScaledInstance(240,350,Image.SCALE_DEFAULT);
+        ImageIcon i22= new ImageIcon(image1);
+        JLabel label1=new JLabel(i22);
+        label1.setBounds(430,30,250,200);
+        add(label1);
+
         b1= new JButton("login");
         b1.setBackground(Color.black);
         b1.setForeground(Color.WHITE);
         b1.setFont(new Font("Thoma",Font.BOLD,20));
-        b1.setBounds(120,150,120,30);
+        b1.setBounds(120,200,120,30);
         b1.addActionListener(this);
         add(b1);
 
@@ -58,7 +67,7 @@ public class login  extends JFrame implements ActionListener {
         b2.setBackground(Color.red);
         b2.setForeground(Color.WHITE);
         b2.setFont(new Font("Thoma",Font.BOLD,20));
-        b2.setBounds(250,150,120,30);
+        b2.setBounds(250,200,120,30);
         b2.addActionListener(this);
         add(b2);
 
@@ -112,3 +121,4 @@ public class login  extends JFrame implements ActionListener {
            }
     }
 }
+
